@@ -1,0 +1,118 @@
+{
+    "FRIDGE": {
+        "/": {
+            "requestType": "GET",
+            "description": "Shows device configuration",
+            "response": "Returns the current configuration settings of the FRIDGE"
+        },
+        "/config": {
+            "requestType": "GET",
+            "description": "Used to configure device WiFi",
+            "response": "Returns a summary of the sent configuration and the confirm API endpoint",
+            "params": {
+                "SSID": "string",
+                "PASSWORD": "string",
+                "IP": "string Fridge's static IP",
+                "TIP": "string Thermometer's static IP",
+                "GATEWAY": "string",
+                "SUBNET": "string"
+            }
+        },
+        "/server": {
+            "requestType": "GET",
+            "description": "Used to configure server hostname and upload url",
+            "response": "Returns confirmation",
+            "params": {
+                "HOSTNAME": "string",
+                "UPLOAD_URL": "string"
+            }
+        },
+        "/confirm-settings": {
+            "requestType": "GET",
+            "description": "Used to accept wifi settings",
+            "response": "Returns the current configuration settings of the FRIDGE"
+        },
+        "/en-ap": {
+            "requestType": "GET",
+            "description": "Used to reset WiFi settings and default back to Soft Access Point Mode", 
+            "response": ""
+        },
+        "/interval": {
+            "requestType": "GET",
+            "description": "Used to set the recording interval",
+            "response": "Returns request status",
+            "params": {
+                "REC_INT": "string"
+            }
+        },
+        "/query": {
+            "requestType": "GET",
+            "description": "Used to request data from fridge",
+            "response": "Returns the dataset from fridge",
+            "responseFormat": "Vac:<value>,Iac:<value>,LT:<value>,LH:<value>"
+        },
+        "/switch": {
+            "requestType": "GET",
+            "description": "Used to request data from fridge",
+            "response": "Returns the dataset from fridge",
+            "responseFormat": "Vac:<value>,Iac:<value>,LT:<value>,LH:<value>",
+            "params": {
+                "STATE": "string {ON / OFF}"
+            }
+        }
+    },
+    "THERMOMETER": {
+        "/": {
+            "requestType": "GET",
+            "description": "Shows device configuration",
+            "response": "Returns the current configuration settings of the FRIDGE"
+        },
+        "/config": {
+            "requestType": "GET",
+            "description": "Used to configure device WiFi",
+            "response": "Returns a summary of the sent configuration and the confirm API endpoint",
+            "params": {
+                "SSID": "string",
+                "PASSWORD": "string",
+                "IP": "string Thermometers's static IP",
+                "FIP": "string Fridge's static IP",
+                "GATEWAY": "string",
+                "SUBNET": "string"
+            }
+        },
+        "/server": {
+            "requestType": "GET",
+            "description": "Used to configure server hostname and upload url",
+            "response": "Returns confirmation",
+            "params": {
+                "HOSTNAME": "string",
+                "UPLOAD_URL": "string"
+            }
+        },
+        "/confirm-settings": {
+            "requestType": "GET",
+            "description": "Used to accept wifi settings",
+            "response": "Returns the current configuration settings of the FRIDGE"
+        },
+        "/en-ap": {
+            "requestType": "GET",
+            "description": "Used to reset WiFi settings and default back to Soft Access Point Mode", 
+            "response": ""
+        },
+        "/interval": {
+            "requestType": "GET",
+            "description": "Used to set the recording interval",
+            "response": "Returns request status",
+            "params": {
+                "REC_INT": "string"
+            }
+        },
+
+        "/query": {
+            "requestType": "GET",
+            "description": "Used to request data from fridge",
+            "response": "Returns the dataset from fridge",
+            "responseFormat": "Vac:<value>,Iac:<value>,LT:<value>,LH:<value>"
+        }
+    }
+}
