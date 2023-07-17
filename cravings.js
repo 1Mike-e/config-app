@@ -1,0 +1,1 @@
+const cravingsArray = ["assorted loaded fries", "beef", "chicken", "extra cheese"]
